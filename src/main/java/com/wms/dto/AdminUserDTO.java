@@ -1,9 +1,10 @@
 package com.wms.dto;
 
+
 /**
- * Created by duyot on 10/18/2016.
+ * Created by duyot on 8/30/2016.
  */
-public class User {
+public class AdminUserDTO{
     public String userId;
     public String username;
     public String password;
@@ -13,7 +14,10 @@ public class User {
     public String imgUrl;
     public String roleName;
 
-    public User(String userId, String username, String password, String status, String createDate, String email, String imgUrl) {
+    public AdminUserDTO() {
+    }
+
+    public AdminUserDTO(String userId, String username, String password, String status, String createDate, String email,String imgUrl, String roleName) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -22,9 +26,6 @@ public class User {
         this.email = email;
         this.imgUrl = imgUrl;
         this.roleName = roleName;
-    }
-
-    public User() {
     }
 
     public String getUserId() {
@@ -83,17 +84,10 @@ public class User {
         this.imgUrl = imgUrl;
     }
 
-    public String getRoleName() {
-        return roleName;
-    }
-
-    public void setRoleName(String roleName) {
-        this.roleName = roleName;
-    }
 
     @Override
     public String toString() {
-        return "User{" +
+        return "AdminUserDTO{" +
                 "userId='" + userId + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
