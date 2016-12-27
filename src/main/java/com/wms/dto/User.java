@@ -12,8 +12,16 @@ public class User {
     public String email;
     public String imgUrl;
     public String roleName;
+    private String  roleId;
+    private String  customerId;
+    private String  roleCode;
 
-    public User(String userId, String username, String password, String status, String createDate, String email, String imgUrl) {
+    public User() {
+    }
+
+    public User(String userId, String username, String password, String status,
+                   String createDate, String email, String imgUrl,
+                   String roleName,String  roleId,String customerId,String roleCode) {
         this.userId = userId;
         this.username = username;
         this.password = password;
@@ -22,9 +30,9 @@ public class User {
         this.email = email;
         this.imgUrl = imgUrl;
         this.roleName = roleName;
-    }
-
-    public User() {
+        this.roleId = roleId;
+        this.customerId = customerId;
+        this.roleCode = roleCode;
     }
 
     public String getUserId() {
@@ -83,6 +91,7 @@ public class User {
         this.imgUrl = imgUrl;
     }
 
+
     public String getRoleName() {
         return roleName;
     }
@@ -91,9 +100,34 @@ public class User {
         this.roleName = roleName;
     }
 
+    public String getRoleId() {
+        return roleId;
+    }
+
+    public void setRoleId(String roleId) {
+        this.roleId = roleId;
+    }
+
+
+    public String getCustomerId() {
+        return customerId;
+    }
+
+    public void setCustomerId(String customerId) {
+        this.customerId = customerId;
+    }
+
+    public String getRoleCode() {
+        return roleCode;
+    }
+
+    public void setRoleCode(String roleCode) {
+        this.roleCode = roleCode;
+    }
+
     @Override
     public String toString() {
-        return "User{" +
+        return "UserDTO{" +
                 "userId='" + userId + '\'' +
                 ", username='" + username + '\'' +
                 ", password='" + password + '\'' +
@@ -102,6 +136,8 @@ public class User {
                 ", email='" + email + '\'' +
                 ", imgUrl='" + imgUrl + '\'' +
                 ", roleName='" + roleName + '\'' +
+                ", roleId='" + roleId + '\'' +
+                ", customerId='" + customerId + '\'' +
                 '}';
     }
 }

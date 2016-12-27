@@ -51,4 +51,13 @@ public class ResponseObject {
     public void setKey(String key) {
         this.key = key;
     }
+
+    @Override
+    public String toString() {
+        return "ResponseObject{" +
+                "statusCode='" + statusCode + '\'' +
+                ", statusName='" + statusName + '\'' +
+                ", key='" + key + '\'' +
+                '}';
+    }
 }
